@@ -20,11 +20,8 @@ export default function Signup({ onSignup, toggleLogin }) {
 
       axios.post('http://192.168.1.16/api/v1/authTodo/signUp', data)
         .then(response => {
-          // Handle the response from the server
           console.log(response.data);
-          // Additional logic based on the response
-
-          // Call onSignup with the necessary data
+     
           onSignup(username);
         })
         .catch(error => {
