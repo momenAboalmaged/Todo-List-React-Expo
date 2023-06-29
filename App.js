@@ -24,12 +24,9 @@ export default function App() {
   }, [user]);
 
   const handleLogin = (username, password) => {
-    if (username.trim() === "" || password.trim() === "") {
-      
+    if (username.trim() === "" || password.trim() === "") {      
       return;
     }
-
-
    
     const loggedInUser = { username };
     setUser(loggedInUser);
@@ -37,12 +34,9 @@ export default function App() {
 
   const handleSignup = (username, password) => {
     if (username.trim() === "" || password.trim() === "") {
-     
       return;
     }
 
-    // Your signup logic here
-    // For simplicity, let's assume successful signup
     const newUser = { username };
     setUser(newUser);
   };
