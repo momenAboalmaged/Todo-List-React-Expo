@@ -14,15 +14,12 @@ export default function Login({ onLogin, toggleLogin }) {
 
     axios.post('http://192.168.1.16/api/v1/auth/signIn', data)
       .then(response => {
-        // Handle the response from the server
+ 
         console.log(response.data);
-        // Additional logic based on the response
-
-        // Call onLogin with the necessary data
         onLogin(username);
       })
       .catch(error => {
-        // Handle error
+     
         console.error(error);
       });
   };
