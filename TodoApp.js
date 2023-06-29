@@ -14,7 +14,7 @@ export default function TodoApp({ username, onLogout }) {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get("http://192.168.1.16/api/v1/todo/getTodos");
+      const response = await axios.get("http://192.168.1.16:3000/api/v1/todo/getTodos");
       setTodos(response.data.todos);
     } catch (error) {
       console.error("Error fetching todos:", error);
@@ -72,7 +72,7 @@ export default function TodoApp({ username, onLogout }) {
         userId: user.userId
       }));
   
-      const response = await axios.post("http://192.168.1.16/api/v1/todo/createTodos", { todos: todosPayload });
+      const response = await axios.post("http://192.168.1.16:3000/api/v1/todo/createTodos", { todos: todosPayload });
   
       if (response.status === 200) {
         Alert.alert("Success", "Todos saved successfully");
