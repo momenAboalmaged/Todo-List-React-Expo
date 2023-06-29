@@ -12,7 +12,7 @@ export default function Login({ onLogin, toggleLogin }) {
       password
     };
 
-    axios.post('http://192.168.1.16/api/v1/auth/signIn', data)
+    axios.post('http://192.168.1.16:3000/api/v1/auth/signIn', data)
       .then(response => {
  
         console.log(response.data);
