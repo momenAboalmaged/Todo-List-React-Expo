@@ -25,19 +25,19 @@ export default function App() {
 
   const handleLogin = (username, password) => {
     if (username.trim() === "" || password.trim() === "") {
-      // Show an error message or perform appropriate action for empty fields
+      
       return;
     }
 
-    // Your login logic here
-    // For simplicity, let's assume successful login
+
+   
     const loggedInUser = { username };
     setUser(loggedInUser);
   };
 
   const handleSignup = (username, password) => {
     if (username.trim() === "" || password.trim() === "") {
-      // Show an error message or perform appropriate action for empty fields
+     
       return;
     }
 
