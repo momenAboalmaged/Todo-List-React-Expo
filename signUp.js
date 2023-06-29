@@ -18,7 +18,7 @@ export default function Signup({ onSignup, toggleLogin }) {
         confirmPassword
       };
 
-      axios.post('http://192.168.1.16/api/v1/authTodo/signUp', data)
+      axios.post('http://192.168.1.16:3000/api/v1/authTodo/signUp', data)
         .then(response => {
           console.log(response.data);
      
